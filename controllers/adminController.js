@@ -1,8 +1,10 @@
+const User = [];
 module.exports = {
   createAdmin: (req, res) => {
     try {
+      User.push(req.body);
       return res.send({
-        response: "Admin Request created successfully",
+        response: User,
       });
     } catch (error) {
       return res.send({
